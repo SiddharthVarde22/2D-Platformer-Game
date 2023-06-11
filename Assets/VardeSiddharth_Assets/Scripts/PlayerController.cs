@@ -8,8 +8,10 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D playerBoxCollider;
     public Vector2 boxColliderSizeWhenCrouched, boxColliderSizeWhenStanding, offsetWhileCrouched, offsetWhileStanding;
 
-    float speed;
-    float jump;
+    public float playerMovementSpeed = 5f;
+
+    float speedInput;
+    float jumpInput;
     bool isCrouching = false;
     Vector3 playerLocalScale;
 
@@ -22,32 +24,49 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = Input.GetAxisRaw("Horizontal");
-        jump = Input.GetAxisRaw("Vertical");
+        speedInput = Input.GetAxisRaw("Horizontal");
+        jumpInput = Input.GetAxisRaw("Vertical");
 
-        playerAnimator.SetFloat("Speed", Mathf.Abs(speed));
-        playerAnimator.SetFloat("Jump", jump);
+        PlayerMovementsFunctionality();
+
+        MovementAnimation();
+        PlayerCrouchFunctionality();
+        
+    }
+
+    void MovementAnimation()
+    {
+        playerAnimator.SetFloat("Speed", Mathf.Abs(speedInput));
+        playerAnimator.SetFloat("Jump", jumpInput);
 
         playerLocalScale = transform.localScale;
 
-        if(speed < 0)
+        if (speedInput < 0)
         {
             playerLocalScale.x = -1 * Mathf.Abs(playerLocalScale.x);
         }
-        else if(speed > 0)
+        else if (speedInput > 0)
         {
             playerLocalScale.x = Mathf.Abs(playerLocalScale.x);
         }
 
         transform.localScale = playerLocalScale;
+    }
 
-        if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+    void PlayerMovementsFunctionality()
+    {
+        transform.position += (transform.right * speedInput * playerMovementSpeed * Time.deltaTime);
+    }
+
+    void PlayerCrouchFunctionality()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
         {
             isCrouching = !isCrouching;
 
             playerAnimator.SetBool("IsCrouched", isCrouching);
 
-            if(isCrouching)
+            if (isCrouching)
             {
                 playerBoxCollider.size = boxColliderSizeWhenCrouched;
                 playerBoxCollider.offset = offsetWhileCrouched;
