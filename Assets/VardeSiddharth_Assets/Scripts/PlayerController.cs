@@ -9,16 +9,21 @@ public class PlayerController : MonoBehaviour
     public Vector2 boxColliderSizeWhenCrouched, boxColliderSizeWhenStanding, offsetWhileCrouched, offsetWhileStanding;
 
     public float playerMovementSpeed = 5f;
+    public float playerJumpForce = 3f;
+    public LayerMask platform_GroundLayer;
+    public float raycastDistance = 0.25f;
 
     float speedInput;
     float jumpInput;
     bool isCrouching = false;
     Vector3 playerLocalScale;
 
+    Rigidbody2D playerRigidBody2d;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerRigidBody2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -28,10 +33,10 @@ public class PlayerController : MonoBehaviour
         jumpInput = Input.GetAxisRaw("Vertical");
 
         PlayerMovementsFunctionality();
+        PlayerJumpFunctionality();
 
         MovementAnimation();
         PlayerCrouchFunctionality();
-        
     }
 
     void MovementAnimation()
@@ -56,6 +61,17 @@ public class PlayerController : MonoBehaviour
     void PlayerMovementsFunctionality()
     {
         transform.position += (transform.right * speedInput * playerMovementSpeed * Time.deltaTime);
+    }
+
+    void PlayerJumpFunctionality()
+    {
+        if(jumpInput > 0)
+        {
+            if (Physics2D.Raycast(transform.position, -1 * transform.up, raycastDistance, platform_GroundLayer))
+            {
+                playerRigidBody2d.AddForce(transform.up * playerJumpForce, ForceMode2D.Force);
+            }
+        }
     }
 
     void PlayerCrouchFunctionality()

@@ -208,6 +208,16 @@ PrefabInstance:
       objectReference: {fileID: 1329809990}
     - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
         type: 3}
+      propertyPath: playerJumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: raycastDistance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
       propertyPath: playerBoxCollider
       value: 
       objectReference: {fileID: 1541382425}
@@ -225,6 +235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: offsetWhileStanding.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: platform_GroundLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
         type: 3}
@@ -256,6 +271,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9115976089721576552, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3173261ea18d7b84a978c675e9a0d646, type: 3}
 --- !u!61 &1541382425 stripped
@@ -275,7 +295,7 @@ GameObject:
   - component: {fileID: 1984348009}
   - component: {fileID: 1984348011}
   - component: {fileID: 1984348010}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
