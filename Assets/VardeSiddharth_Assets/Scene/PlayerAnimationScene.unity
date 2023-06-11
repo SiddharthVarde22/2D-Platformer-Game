@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!95 &1329809990 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 635919486872687074, guid: 3173261ea18d7b84a978c675e9a0d646,
-    type: 3}
-  m_PrefabInstance: {fileID: 1356844973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1356844973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,11 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 635919486872687072, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 635919486872687073, guid: 3173261ea18d7b84a978c675e9a0d646,
         type: 3}
       propertyPath: m_RootOrder
@@ -201,89 +190,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: playerAnimator
-      value: 
-      objectReference: {fileID: 1329809990}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: playerJumpForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: raycastDistance
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: playerBoxCollider
-      value: 
-      objectReference: {fileID: 1541382425}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: playerMovementSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: offsetWhileCrouched.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: offsetWhileStanding.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: platform_GroundLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: boxColliderSizeWhenCrouched.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: boxColliderSizeWhenCrouched.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: boxColliderSizeWhenStanding.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: boxColliderSizeWhenStanding.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343960099234729350, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343960099234729350, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9115976089721576552, guid: 3173261ea18d7b84a978c675e9a0d646,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3173261ea18d7b84a978c675e9a0d646, type: 3}
---- !u!61 &1541382425 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 8343960099234729350, guid: 3173261ea18d7b84a978c675e9a0d646,
-    type: 3}
-  m_PrefabInstance: {fileID: 1356844973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1984348008
 GameObject:
   m_ObjectHideFlags: 0

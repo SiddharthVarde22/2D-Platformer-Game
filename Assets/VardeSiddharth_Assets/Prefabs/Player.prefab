@@ -171,7 +171,7 @@ MonoBehaviour:
   offsetWhileCrouched: {x: 0, y: 0.5}
   offsetWhileStanding: {x: 0, y: 1}
   playerMovementSpeed: 10
-  playerJumpForce: 10
+  playerJumpForce: 5
   platform_GroundLayer:
     serializedVersion: 2
     m_Bits: 64
