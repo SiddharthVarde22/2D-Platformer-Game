@@ -206,8 +206,59 @@ PrefabInstance:
       propertyPath: playerAnimator
       value: 
       objectReference: {fileID: 1329809990}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: playerBoxCollider
+      value: 
+      objectReference: {fileID: 1541382425}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: offsetWhileCrouched.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: offsetWhileStanding.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: boxColliderSizeWhenCrouched.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: boxColliderSizeWhenCrouched.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: boxColliderSizeWhenStanding.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529142472576264621, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: boxColliderSizeWhenStanding.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343960099234729350, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343960099234729350, guid: 3173261ea18d7b84a978c675e9a0d646,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3173261ea18d7b84a978c675e9a0d646, type: 3}
+--- !u!61 &1541382425 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8343960099234729350, guid: 3173261ea18d7b84a978c675e9a0d646,
+    type: 3}
+  m_PrefabInstance: {fileID: 1356844973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1984348008
 GameObject:
   m_ObjectHideFlags: 0
