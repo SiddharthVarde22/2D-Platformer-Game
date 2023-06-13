@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2772312454967361649}
   - component: {fileID: 2772312454967361648}
   - component: {fileID: 2772312454967361663}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_Chomper
   m_TagString: Untagged
   m_Icon: {fileID: 0}

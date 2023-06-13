@@ -341,6 +341,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a9c9ed77af8704a9ae53be385be65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &367334998
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2772312454967361648, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: maxLeftDiatanceToTravel
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361648, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: maxRightDistanceToTravel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5407124
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361650, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772312454967361652, guid: c203821ab1c8a5445860ac163fba42d8,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy_Chomper (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c203821ab1c8a5445860ac163fba42d8, type: 3}
 --- !u!1 &520139680
 GameObject:
   m_ObjectHideFlags: 0
