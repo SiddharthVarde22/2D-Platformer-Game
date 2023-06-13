@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D playerRigidBody2d;
 
+    [SerializeField]
+    ScoreController scoreControllerRefrence;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -93,5 +96,10 @@ public class PlayerController : MonoBehaviour
                 playerBoxCollider.offset = offsetWhileStanding;
             }
         }
+    }
+
+    public void OnKeyCollected(int pointsToAdd)
+    {
+        scoreControllerRefrence.AddScore(pointsToAdd);
     }
 }
