@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -101,5 +102,10 @@ public class PlayerController : MonoBehaviour
     public void OnKeyCollected(int pointsToAdd)
     {
         scoreControllerRefrence.AddScore(pointsToAdd);
+    }
+
+    public void ReloadTheLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
