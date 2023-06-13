@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,10 +25,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     ScoreController scoreControllerRefrence;
 
+    int playerHealth = 3;
+    [SerializeField]
+    TextMeshProUGUI playerHealthText;
+
     // Start is called before the first frame update
     void Start()
     {
         playerRigidBody2d = GetComponent<Rigidbody2D>();
+        ShowPlayerHealth();
     }
 
     // Update is called once per frame
@@ -102,6 +108,22 @@ public class PlayerController : MonoBehaviour
     public void OnKeyCollected(int pointsToAdd)
     {
         scoreControllerRefrence.AddScore(pointsToAdd);
+    }
+
+    public void ReducePlayerHealth()
+    {
+        playerHealth--;
+        ShowPlayerHealth();
+
+        if(playerHealth <= 0)
+        {
+            ReloadTheLevel();
+        }
+    }
+
+    void ShowPlayerHealth()
+    {
+        playerHealthText.text = "Health : " + playerHealth;
     }
 
     public void ReloadTheLevel()

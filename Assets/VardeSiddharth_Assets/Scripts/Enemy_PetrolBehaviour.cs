@@ -28,8 +28,10 @@ public class Enemy_PetrolBehaviour : MonoBehaviour
 
         if(collision.gameObject.TryGetComponent<PlayerController>(out playerControllerRefrence))
         {
+            //Reduce the player health
+            playerControllerRefrence.ReducePlayerHealth();
             //Reload the level
-            playerControllerRefrence.ReloadTheLevel();
+            //playerControllerRefrence.ReloadTheLevel();
         }
     }
 
