@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/VardeSiddharth_Assets/Scene/LobbyScene.unity
+    guid: e19811286c962074182f7aed3230ba22
+  - enabled: 1
     path: Assets/VardeSiddharth_Assets/Scene/Level1.unity
     guid: 939cfe392a3fc2047b8bfce3decf7bf7
   - enabled: 1
