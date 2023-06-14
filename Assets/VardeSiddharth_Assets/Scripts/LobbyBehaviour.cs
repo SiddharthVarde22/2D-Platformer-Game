@@ -7,22 +7,32 @@ using UnityEngine.SceneManagement;
 public class LobbyBehaviour : MonoBehaviour
 {
     [SerializeField]
-    Button playButton, quitbutton;
+    Button continueButton, quitbutton, levelSelectionButton;
+    [SerializeField]
+    GameObject levelSelectionPanel;
+    [SerializeField]
+    LevelSaver levelSaver;
 
     // Start is called before the first frame update
     void Start()
     {
-        playButton.onClick.AddListener(OnPlayButtonPressed);
+        continueButton.onClick.AddListener(OnContinuePlayButtonPressed);
         quitbutton.onClick.AddListener(OnQuitButtonPressed);
+        levelSelectionButton.onClick.AddListener(OnSelectLevelButtonPressed);
     }
 
-    public void OnPlayButtonPressed()
+    public void OnContinuePlayButtonPressed()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(levelSaver.GetSavedLastLevel());
     }
 
     public void OnQuitButtonPressed()
     {
         Application.Quit();
+    }
+
+    public void OnSelectLevelButtonPressed()
+    {
+        levelSelectionPanel.SetActive(true);
     }
 }
