@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI playerHealthText;
 
+    [SerializeField]
+    GameOverController gameOverControllerrefrence;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -117,7 +120,8 @@ public class PlayerController : MonoBehaviour
 
         if(playerHealth <= 0)
         {
-            ReloadTheLevel();
+            gameOverControllerrefrence.gameObject.SetActive(true);
+            this.enabled = false;
         }
     }
 
