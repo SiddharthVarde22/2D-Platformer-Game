@@ -11,6 +11,9 @@ public class NextLevelLoader : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
+            //Mark this level as level complete and next level as unlocked level
+            LevelManager.LevelManagerInstance.MarkLevelComplete();
+            //Load the next level
             SceneManager.LoadScene(nameOfTheLevelToLoad);
         }
     }

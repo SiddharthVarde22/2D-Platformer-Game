@@ -20,6 +20,9 @@ public class LevelLoader : MonoBehaviour
 
     public void OnLoadLevelPressed()
     {
-        SceneManager.LoadScene(levelName);
+        if (LevelManager.LevelManagerInstance.GetLevelStatus(levelName) != LevelStatus.locked)
+        {
+            SceneManager.LoadScene(levelName);
+        }
     }
 }
