@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelLoader : MonoBehaviour
 {
-
     public string nameOfTheLevelToLoad;
 
     private void OnTriggerEnter2D(Collider2D collision)
