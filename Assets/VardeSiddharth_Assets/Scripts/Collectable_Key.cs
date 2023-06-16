@@ -15,6 +15,8 @@ public class Collectable_Key : MonoBehaviour
         {
             //Add points to the player
             playerRefrence.OnKeyCollected(poitntsToAdd);
+            //Play the sound
+            SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.ItemPickup);
             //delete gameobject(Self)
             Destroy(gameObject);
         }

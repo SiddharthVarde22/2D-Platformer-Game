@@ -35,12 +35,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     GameOverController gameOverControllerrefrence;
+    [SerializeField]
+    float footStepsSoundLoopTime = 0.3f;
+    float currentTimeToCallFootStepSound;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRigidBody2d = GetComponent<Rigidbody2D>();
         ShowPlayerHealth();
+        currentTimeToCallFootStepSound = footStepsSoundLoopTime;
     }
 
     // Update is called once per frame
@@ -78,6 +82,15 @@ public class PlayerController : MonoBehaviour
     void PlayerMovementsFunctionality()
     {
         transform.position += (transform.right * speedInput * playerMovementSpeed * Time.deltaTime);
+        if (speedInput != 0)
+        {
+            currentTimeToCallFootStepSound += Time.deltaTime;
+            if (currentTimeToCallFootStepSound >= footStepsSoundLoopTime)
+            {
+                SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.PlayerMove);
+                currentTimeToCallFootStepSound = 0;
+            }
+        }
     }
 
     void PlayerJumpFunctionality()
@@ -87,6 +100,7 @@ public class PlayerController : MonoBehaviour
             if (Physics2D.Raycast(transform.position, -1 * transform.up, raycastDistance, platform_GroundLayer))
             {
                 playerRigidBody2d.AddForce(transform.up * playerJumpForce, ForceMode2D.Force);
+                SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.PlayerJump);
             }
         }
     }
@@ -113,6 +127,7 @@ public class PlayerController : MonoBehaviour
 
         if(playerHealth <= 0)
         {
+            SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.PlayerDeth);
             gameOverControllerrefrence.gameObject.SetActive(true);
             this.enabled = false;
         }
