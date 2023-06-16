@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class NextLevelLoader : MonoBehaviour
+public class LevelCompleteDetector : MonoBehaviour
 {
-    public string nameOfTheLevelToLoad;
+    [SerializeField]
+    GameObject LevelCompletePanel;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,8 +13,8 @@ public class NextLevelLoader : MonoBehaviour
         {
             //Mark this level as level complete and next level as unlocked level
             LevelManager.LevelManagerInstance.MarkLevelComplete();
-            //Load the next level
-            SceneManager.LoadScene(nameOfTheLevelToLoad);
+            //load the level complete panel
+            LevelCompletePanel.SetActive(true);
         }
     }
 }

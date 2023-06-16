@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/VardeSiddharth_Assets/Scene/Level4.unity
     guid: 4984fedb79cf26f4fa18b2e14c07f6b6
+  - enabled: 1
+    path: Assets/VardeSiddharth_Assets/Scene/Level5.unity
+    guid: 991526a63759ee547a430049853b2d95
   m_configObjects: {}
