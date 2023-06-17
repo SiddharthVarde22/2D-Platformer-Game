@@ -131,6 +131,10 @@ public class PlayerController : MonoBehaviour
             gameOverControllerrefrence.gameObject.SetActive(true);
             this.enabled = false;
         }
+        else
+        {
+            SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.PlayerHurt);
+        }
     }
 
     void ShowPlayerHealth()

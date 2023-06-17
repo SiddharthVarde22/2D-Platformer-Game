@@ -30,8 +30,6 @@ public class Enemy_PetrolBehaviour : MonoBehaviour
         {
             //Reduce the player health
             playerControllerRefrence.ReducePlayerHealth();
-            //Reload the level
-            //playerControllerRefrence.ReloadTheLevel();
         }
     }
 

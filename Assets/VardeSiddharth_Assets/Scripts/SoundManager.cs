@@ -76,7 +76,9 @@ public enum SoundType
     PlayerJump,
     BackgroundMusic,
     ItemPickup,
-    PlayerDeth
+    PlayerDeth,
+    LevelComplete,
+    PlayerHurt
 }
 
 [Serializable]
