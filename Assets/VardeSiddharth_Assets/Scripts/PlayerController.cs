@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
 
         PlayerMovementsFunctionality();
         PlayerJumpFunctionality();
+        PlayerAttackFunctionality();
 
         MovementAnimation();
         PlayerCrouchFunctionality();
@@ -112,6 +113,15 @@ public class PlayerController : MonoBehaviour
             isCrouching = !isCrouching;
 
             playerAnimator.SetBool("IsCrouched", isCrouching);
+        }
+    }
+
+    void PlayerAttackFunctionality()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.PlayerAttack);
+            playerAnimator.SetTrigger("Attack");
         }
     }
 

@@ -78,7 +78,9 @@ public enum SoundType
     ItemPickup,
     PlayerDeth,
     LevelComplete,
-    PlayerHurt
+    PlayerHurt,
+    EnemyDie,
+    PlayerAttack
 }
 
 [Serializable]

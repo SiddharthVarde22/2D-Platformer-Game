@@ -54,4 +54,10 @@ public class Enemy_PetrolBehaviour : MonoBehaviour
             }
         }
     }
+
+    public void EnemyDie()
+    {
+        SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.EnemyDie);
+        Destroy(gameObject);
+    }
 }
