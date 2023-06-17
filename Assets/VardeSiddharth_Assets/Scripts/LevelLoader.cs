@@ -20,6 +20,10 @@ public class LevelLoader : MonoBehaviour
 
     public void OnLoadLevelPressed()
     {
-        SceneManager.LoadScene(levelName);
+        if (LevelManager.LevelManagerInstance.GetLevelStatus(levelName) != LevelStatus.locked)
+        {
+            SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.ButtonClick);
+            SceneManager.LoadScene(levelName);
+        }
     }
 }

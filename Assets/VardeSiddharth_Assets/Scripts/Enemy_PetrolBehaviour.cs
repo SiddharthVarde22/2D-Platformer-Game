@@ -30,8 +30,6 @@ public class Enemy_PetrolBehaviour : MonoBehaviour
         {
             //Reduce the player health
             playerControllerRefrence.ReducePlayerHealth();
-            //Reload the level
-            //playerControllerRefrence.ReloadTheLevel();
         }
     }
 
@@ -55,5 +53,11 @@ public class Enemy_PetrolBehaviour : MonoBehaviour
                 isMovingLeft = true;
             }
         }
+    }
+
+    public void EnemyDie()
+    {
+        SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.EnemyDie);
+        Destroy(gameObject);
     }
 }
