@@ -11,6 +11,8 @@ public class LevelCompleteDetector : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
+            //play level complete sound
+            SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.LevelComplete);
             //Mark this level as level complete and next level as unlocked level
             LevelManager.LevelManagerInstance.MarkLevelComplete();
             //load the level complete panel

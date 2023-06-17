@@ -22,6 +22,7 @@ public class GameOverController : MonoBehaviour
 
     public void OnRestartButtonPressed()
     {
+        SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.ButtonClick);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

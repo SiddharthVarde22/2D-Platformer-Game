@@ -23,16 +23,19 @@ public class LobbyBehaviour : MonoBehaviour
 
     public void OnContinuePlayButtonPressed()
     {
+        SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.ButtonClick);
         SceneManager.LoadScene(levelSaver.GetSavedLastLevel());
     }
 
     public void OnQuitButtonPressed()
     {
+        SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.ButtonClick);
         Application.Quit();
     }
 
     public void OnSelectLevelButtonPressed()
     {
+        SoundManager.SoundManagerInstance.PlaySoundEffects(SoundType.ButtonClick);
         levelSelectionPanel.SetActive(true);
     }
 }
